@@ -1,0 +1,192 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0d1026;
+    background-image: url("sky.jpg");
+    background-size: contain;
+}
+
+.text-wrapper, .decoder {
+    width: 966px;
+    border-radius: 15px;
+
+}
+
+.text-wrapper {
+    margin: 30px;
+    background-image: url("paper.jpg");
+    background-size: contain;
+    box-shadow: 0 0 30px #a1ff00;
+    padding: 30px 15px;
+}
+
+.decoder {
+    background-color: #60a8af;
+    background-image: url("wood.jpg");
+    background-size: contain;
+    box-shadow: 0 0 15px #05af95;
+    margin-bottom: 100px;
+    padding: 15px;
+}
+
+.row {
+    line-height: 1.5em;
+    margin: 25px 30px;
+}
+
+.word {
+    margin: 0 20px;
+    display: inline-block;
+    position: relative;
+    font-size: 0;
+}
+
+.letter, .symbol {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.letter {
+    border: 1px solid #a17a42;
+    border-radius: 2px;
+    vertical-align: top;
+    line-height: 42px;
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 0 0 3px yellow;
+}
+
+.letter + .letter {
+    margin-left: 5px;
+}
+
+.symbol {
+    vertical-align: middle;
+    z-index: 2;
+}
+
+.decoded {
+    background-image: none!important;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 25%;
+    float: left;
+    background-image: radial-gradient(circle, rgb(252 255 174 / 73%) 0%, rgba(0,212,255,0) 80%);
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+
+input {
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 23px;
+    font-size: 20px;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.comma {
+    font-size: 28px;
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    right: -8px;
+}
+
+/*==========*/
+
+.planet {
+    background-image: url("./symbols/planet.svg");
+}
+
+.amphora {
+    background-image: url("./symbols/amphora.svg");
+}
+
+.hand {
+    background-image: url("./symbols/hand.svg");
+}
+
+.big-bottle {
+    background-image: url("./symbols/big-bottle.svg");
+}
+
+.crying-eye {
+    background-image: url("./symbols/crying-eye.svg");
+}
+
+.hands-star {
+    background-image: url("./symbols/hands-star.svg");
+}
+
+.night-bottle {
+    background-image: url("./symbols/night-bottle.svg");
+}
+
+.snake {
+    background-image: url("./symbols/snake.svg");
+}
+
+.hands-sun {
+    background-image: url("./symbols/hands-sun.svg");
+}
+
+.night-sun {
+    background-image: url("./symbols/night-sun.svg");
+}
+
+.heart {
+    background-image: url("./symbols/heart.svg");
+}
+
+.candle {
+    background-image: url("./symbols/candle.svg");
+}
+
+.hands-eye {
+    background-image: url("./symbols/hands-eye.svg");
+}
+
+.small-bottle {
+    background-image: url("./symbols/small-bottle.svg");
+}
+
+.butterfly {
+    background-image: url("./symbols/butterfly.svg");
+}
+
+.eclipse {
+    background-image: url("./symbols/eclipse.svg");
+}
+
+.shining-eye {
+    background-image: url("./symbols/shining-eye.svg");
+}
+
+.key {
+    background-image: url("./symbols/key.svg");
+}
+
+.spider {
+    background-image: url("./symbols/spider.svg");
+}
