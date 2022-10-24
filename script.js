@@ -71,9 +71,9 @@
                 .replace(/\xa0/g, ' ')
                 .replace(/\n/g, '')
                 .replace(/(^\w|\.\s?\w)/g, m => m.toUpperCase())
-                .replace(/\./g, '.\n')
+                .replace(/(\.)[^$]/g, '.\n')
 
-            if (result.length > 190) {
+            if (result.length >= 188) {
                result += ' 😊';
             }
 
