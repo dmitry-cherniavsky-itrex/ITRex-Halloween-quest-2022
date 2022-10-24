@@ -5,6 +5,21 @@
          started: false,
       };
 
+      const _playMusic = () => {
+         audio.media.play();
+         audio.started = true;
+
+         const interval = setInterval(() => {
+             if (audio.media.volume > 0.95) {
+                clearInterval(interval);
+
+                return;
+             }
+
+             audio.media.volume += 0.05;
+         },800);
+      }
+
       const _populateLetter = (className, letterValue) => {
          const letters = document.querySelectorAll(`.letter.${className}`);
 
@@ -14,8 +29,7 @@
          });
 
          if (!audio.started) {
-            audio.media.play();
-            audio.started = true;
+            _playMusic();
          }
       };
 
@@ -71,6 +85,8 @@
 
       const init = () => {
          _initEvents();
+
+         audio.media.volume = 0.05;
 
          console.log('===========================================================')
          console.log('What are you looking for? There\'s nothing for you here :)')
