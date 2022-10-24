@@ -13,36 +13,45 @@ html, body {
     flex-direction: column;
     align-items: center;
     background-color: #0d1026;
-    background-image: url("sky.jpg");
+    background-image: url("img/sky.jpg");
     background-size: contain;
 }
 
 .text-wrapper, .decoder {
     width: 966px;
     border-radius: 15px;
-
 }
 
 .text-wrapper {
-    margin: 30px;
-    background-image: url("paper.jpg");
+    margin: 50px;
+    background-image: url("img/paper.jpg");
     background-size: contain;
+    border: 1px solid #927049;
     box-shadow: 0 0 30px #a1ff00;
-    padding: 30px 15px;
+    padding: 30px;
 }
 
 .decoder {
     background-color: #60a8af;
-    background-image: url("wood.jpg");
+    background-image: url("img/wood.jpg");
     background-size: contain;
     box-shadow: 0 0 15px #05af95;
     margin-bottom: 100px;
-    padding: 15px;
+    padding: 20px 20px 20px 50px;
+}
+
+.dash {
+    display: inline-block;
+    position: relative;
+    font-size: 26px;
+    top: 15px;
+    left: 3px;
 }
 
 .row {
     line-height: 1.5em;
     margin: 25px 30px;
+    text-align: center;
 }
 
 .word {
@@ -87,7 +96,7 @@ html, body {
 .input-group {
     margin-bottom: 10px;
     display: inline-block;
-    width: 25%;
+    width: 16%;
     float: left;
     background-image: radial-gradient(circle, rgb(252 255 174 / 73%) 0%, rgba(0,212,255,0) 80%);
     background-size: 40px;
@@ -105,12 +114,22 @@ input {
     text-align: center;
 }
 
+hr {
+    border: 2px solid #af8758;
+}
+
 .comma {
     font-size: 28px;
     position: absolute;
     display: inline-block;
     top: 20px;
     right: -8px;
+}
+
+.created-by {
+    color: #2e8dc2;
+    font-family: Arial;
+    margin: 20px 0;
 }
 
 /*==========*/
@@ -163,8 +182,8 @@ input {
     background-image: url("./symbols/candle.svg");
 }
 
-.hands-eye {
-    background-image: url("./symbols/hands-eye.svg");
+.mushroom {
+    background-image: url("./symbols/mushroom.svg");
 }
 
 .small-bottle {

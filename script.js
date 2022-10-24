@@ -44,9 +44,11 @@
 
             e.clipboardData.setData('text/plain',
                 selection.toString()
+                    .toLowerCase()
                     .replace(/ /g, '')
                     .replace(/\xa0/g, ' ')
                     .replace(/\n/g, '')
+                    .replace(/(^\w|\.\s?\w)/g, m => m.toUpperCase())
                     .replace(/\./g, '.\n')
             );
 
@@ -62,8 +64,8 @@
          console.log('===========================================================')
       }
 
-      return {init};
+      return init;
    }
 
-   window.addEventListener('load', script().init)
+   window.addEventListener('load', script())
 })();
