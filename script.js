@@ -1,5 +1,10 @@
 (() => {
    function script () {
+      const audio = {
+         media: new Audio('music/voland.mp3'),
+         started: false,
+      };
+
       const _populateLetter = (className, letterValue) => {
          const letters = document.querySelectorAll(`.letter.${className}`);
 
@@ -7,6 +12,10 @@
             letter.classList.add("decoded")
             letter.innerText = letterValue;
          });
+
+         if (!audio.started) {
+            audio.media.play();
+         }
       };
 
       const _disableDecodeForClassName = (className) => {
