@@ -1,3 +1,13 @@
+::-moz-selection {
+    color: #4b0306;
+    background: #ffa600;
+}
+
+::selection {
+    color: #810b0f;
+    background: #ffa600;
+}
+
 html, body {
     margin: 0;
     padding: 0;
