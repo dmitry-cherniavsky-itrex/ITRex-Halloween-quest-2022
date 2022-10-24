@@ -46,21 +46,24 @@
          const inputs = document.querySelectorAll('input');
 
          inputs.forEach(input => {
-            input.addEventListener('keyup', _letterEnteredHandler);
+            input.addEventListener('input', _letterEnteredHandler);
          });
 
          document.addEventListener('copy', function(e){
-            const selection = document.getSelection();
+            const selection = document.getSelection() || '';
+            let result = selection.toString()
+                .toLowerCase()
+                .replace(/ /g, '')
+                .replace(/\xa0/g, ' ')
+                .replace(/\n/g, '')
+                .replace(/(^\w|\.\s?\w)/g, m => m.toUpperCase())
+                .replace(/\./g, '.\n')
 
-            e.clipboardData.setData('text/plain',
-                selection.toString()
-                    .toLowerCase()
-                    .replace(/ /g, '')
-                    .replace(/\xa0/g, ' ')
-                    .replace(/\n/g, '')
-                    .replace(/(^\w|\.\s?\w)/g, m => m.toUpperCase())
-                    .replace(/\./g, '.\n')
-            );
+            if (result.length > 190) {
+               result += ' 😊';
+            }
+
+            e.clipboardData.setData('text/plain', result);
 
             e.preventDefault();
          });
