@@ -15,6 +15,7 @@
 
          if (!audio.started) {
             audio.media.play();
+            audio.started = true;
          }
       };
 
